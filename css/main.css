@@ -68,7 +68,6 @@ body {
 }
 
 body {
-  background: #050505;
   font-family: "Lora", serif;
   font-size: 1.7rem;
   font-style: normal;
@@ -105,13 +104,14 @@ a:active {
  *
  * ------------------------------------------------------------------- */
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
-  font-family: "Frank Ruhl Libre", serif;
+  font-family: "gimlet-display", serif;
   font-weight: 500;
   font-style: normal;
   color: #000000;
   font-variant-ligatures: common-ligatures;
   text-rendering: optimizeLegibility;
 }
+
 
 h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
   margin-top: 6rem;
@@ -214,7 +214,7 @@ i {
 
 strong,
 b {
-  font-family: "Lora", serif;
+  font-family: "gimlet-display", serif;
   font-weight: 700;
 }
 
@@ -1461,7 +1461,7 @@ input::-moz-focus-inner {
 
 .section-heading {
   font-family: "Roboto", sans-serif;
-  font-weight: 600;
+  font-weight: 500;
   font-size: 1.7rem;
   line-height: 1.176;
   text-transform: uppercase;
@@ -1471,6 +1471,21 @@ input::-moz-focus-inner {
   margin-bottom: 8rem;
   position: relative;
 }
+
+.section-heading2 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 1.7rem;
+  color: white;
+  line-height: 1.176;
+  text-transform: uppercase;
+  letter-spacing: .5rem;
+  margin-top: 0;
+  padding-top: 3.2rem;
+  margin-bottom: 8rem;
+  position: relative;
+}
+
 
 .section-heading::before {
   content: "";
@@ -1483,9 +1498,19 @@ input::-moz-focus-inner {
   left: 0;
 }
 
+.section-heading2::before {
+  content: "";
+  display: block;
+  width: 150px;
+  height: 2px;
+  background-color: #cf1767;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
 .section-heading--centerbottom {
   text-align: center;
-  padding-top: 0;
   padding-bottom: 3.2rem;
 }
 
@@ -1497,16 +1522,15 @@ input::-moz-focus-inner {
 }
 
 .section-desc {
-  font-family: "Frank Ruhl Libre", serif;
-  font-size: 5.4rem;
+  font-family: "gimlet-display", serif;
+  font-size: 5rem;
   font-weight: 400;
   line-height: 1.259;
-  letter-spacing: -0.05rem;
   color: #000000;
 }
 
 .item-title {
-  font-family: "Frank Ruhl Libre", serif;
+  font-family: "gimlet-display", serif;
   font-size: 3.6rem;
   font-weight: 500;
   line-height: 1.222;
@@ -1519,10 +1543,7 @@ input::-moz-focus-inner {
   color: #ffffff;
 }
 
-/* -------------------------------------------------------------------
- * responsive:
- * common and reusable styles
- * ------------------------------------------------------------------- */
+
 @media screen and (max-width:1200px) {
   .item-title {
     font-size: 3rem;
@@ -1601,39 +1622,17 @@ input::-moz-focus-inner {
 }
 
 .s-header.sticky {
-  background-color: #050505;
+  position: absolute;
+  top: 2rem;
+  left: 0;
+  width: 100%;
+  height: 78px;
+  text-align: center;
+  z-index: 100;
+  background-image: url(http://www.swinginsam.com/wp-content/themes/html5blank-stable/assets/stars_background_loop.gif);
   position: fixed;
   top: 0;
   left: 0;
-}
-
-/* -------------------------------------------------------------------
- * ## header logo
- * ------------------------------------------------------------------- */
-.header-logo {
-  display: inline-block;
-  margin: 6px 0 0 0;
-  padding: 0;
-  -webkit-transform: translate3d(0, -50%, 0);
-  transform: translate3d(0, -50%, 0);
-  position: absolute;
-  top: 50%;
-  left: 40px;
-}
-
-.header-logo a {
-  display: block;
-  margin: 0;
-  padding: 0;
-  outline: 0;
-  border: none;
-  transition: all .3s;
-}
-
-.header-logo img {
-  max-width: 180px;
-  margin: 0;
-position: inherit;
 }
 
 /* -------------------------------------------------------------------
@@ -1829,11 +1828,6 @@ position: inherit;
     top: 0;
   }
 
-  .header-logo img {
-    width: 128px;
-    height: 30px;
-  }
-
   .header-nav-wrap {
     display: none;
     text-align: left;
@@ -1863,19 +1857,6 @@ position: inherit;
     line-height: 20px;
   }
 
-  .header-nav-wrap .header-social {
-    display: block;
-    position: static;
-  }
-
-  .header-nav-wrap .header-social li {
-    font-size: 1.8rem;
-    margin-right: 1.6rem;
-  }
-
-  .header-nav-wrap .header-social li a {
-    line-height: 36px;
-  }
 
   .header-menu-toggle {
     display: block;
@@ -1883,12 +1864,6 @@ position: inherit;
 
 }
 
-@media screen and (max-width:600px) {
-  .header-logo {
-    left: 35px;
-  }
-
-}
 
 /* -------------------------------------------------------------------
  * make sure the menu is visible on larger screens
@@ -1913,6 +1888,14 @@ position: inherit;
   background-color: #050505;
 }
 
+.intro-background {
+  width: 100%;
+  height: 100vh;
+  min-height: 792px;
+  background-size: auto;
+  opacity: inherit;
+}
+
 .intro-content {
   height: 100%;
   max-width: 1140px;
@@ -1927,7 +1910,7 @@ position: inherit;
   background-color: #02182c;
   background-repeat: no-repeat;
   background-position: top center;
-  background-image: url(../images/moanetb.jpg);
+  background-image: url(../images/moaetcrapo.jpg);
   background-size: cover;
   position: absolute;
   top: 20%;
@@ -1948,12 +1931,10 @@ position: inherit;
 }
 
 .intro-grid {
-  background-image: url(../images/pattern-dot-grid.svg);
-  background-size: 24px 24px;
-  opacity: .15;
+  background-image: url(http://www.swinginsam.com/wp-content/themes/html5blank-stable/assets/stars_background_loop.gif);
   position: absolute;
   top: 30%;
-  right: 0;
+  right: 10%;
   bottom: 0;
   left: 30%;
 }
@@ -1970,13 +1951,13 @@ position: inherit;
   font-size: 2.4rem;
   font-weight: 500;
   line-height: 1.333;
+  letter-spacing: .2rem;
   color: #cf1767;
   margin-top: 0;
 }
 
 .intro-text h1 {
   font-size: 7.8rem;
-  font-weight: 500;
   line-height: 1.179;
   color: #ffffff;
   margin-top: 0;
@@ -2011,6 +1992,7 @@ position: inherit;
   width: 72px;
   background-color: #cf1767;
 }
+
 
 /* -------------------------------------------------------------------
  * responsive:
@@ -2167,8 +2149,8 @@ position: inherit;
  *
  * ------------------------------------------------------------------- */
 .s-about {
-  padding-top: 19.2rem;
-  padding-bottom: 16.8rem;
+  padding-top: 16rem;
+  padding-bottom: 16rem;
   background-color: #ffffff;
 }
 
@@ -2725,24 +2707,21 @@ position: inherit;
 }
 
 
-
-/* ===================================================================
- * # works
- *
- * ------------------------------------------------------------------- */
 .s-works {
-  padding-top: 19.2rem;
-  padding-bottom: 16rem;
-  background-color: #ffffff;
+  padding-top: 13rem;
+  padding-bottom: 1rem;
+  background-color: #000000;
+  background-image: url(https://thumbs.gfycat.com/ChubbyNiceCommabutterfly-max-1mb.gif);
 }
 
 .masonry-wrap {
   width: 89%;
-  max-width: 1400px;
+  max-width: 1600px;
   margin-top: 11.2rem;
   margin-right: auto;
   margin-left: auto;
 }
+
 
 .masonry .grid-sizer,
 .masonry__brick {
@@ -2755,9 +2734,10 @@ position: inherit;
   margin-bottom: 60px;
 }
 
+
 .item-folio {
   text-align: center;
-  padding: 60px;
+  padding: 50px;
   background-color: #EFEFEF;
   transition: all 0.5s ease-in-out;
 }
@@ -2814,6 +2794,7 @@ position: inherit;
 
 .item-folio__thumb img {
   vertical-align: bottom;
+  min-width: 400px;
 }
 
 .item-folio__thumb .item-folio__project-link {
@@ -3032,8 +3013,8 @@ position: inherit;
  *
  * ------------------------------------------------------------------- */
 .s-testimonials {
-  padding-top: 18.4rem;
-  padding-bottom: 16rem;
+  padding-top: 1rem;
+  padding-bottom: 10rem;
   background-color: #efefef;
 }
 
@@ -3043,9 +3024,10 @@ position: inherit;
 
 .testimonials p {
   font-family: "Roboto", sans-serif;
-  font-weight: 400;
-  font-size: 4rem;
-  line-height: 1.8;
+  font-weight: 300;
+  font-size: 2.5rem;
+  font-style: italic;
+  line-height: 1.4;
   color: #000000;
 }
 
@@ -3273,7 +3255,6 @@ position: inherit;
  *
  * ------------------------------------------------------------------- */
 .s-contact {
-  padding-top: 18.4rem;
   padding-bottom: 6.4rem;
   background-color: #050505;
 }
@@ -3436,26 +3417,6 @@ position: inherit;
 
 
 
-/* ===================================================================
- * # footer
- *
- * ------------------------------------------------------------------- */
-footer {
-  font-family: "Roboto", sans-serif;
-  font-weight: 400;
-  font-size: 1.6rem;
-  line-height: 2;
-  padding-top: 0;
-  padding-bottom: 6.4rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.03);
-  color: rgba(255, 255, 255, 0.3);
-  position: relative;
-}
-
-footer a,
-footer a:visited {
-  color: #ffffff;
-}
 
 /* -------------------------------------------------------------------
  * ## copyright
@@ -3481,74 +3442,6 @@ footer a:visited {
   display: none;
 }
 
-/* -------------------------------------------------------------------
- * ## go to top
- * ------------------------------------------------------------------- */
-.ss-go-top {
-  position: absolute;
-  top: -1px;
-  right: 6rem;
-  z-index: 2;
-}
-
-.ss-go-top a {
-  display: block;
-  background: rgba(255, 255, 255, 0.05);
-  text-decoration: none;
-  margin: 0;
-  padding: 0;
-  border: 0 none;
-  height: 60px;
-  width: 60px;
-  line-height: 60px;
-  text-align: center;
-  color: white;
-  text-transform: uppercase;
-  transition: all .3s;
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-image: url(../images/icons/icon-arrow-up.svg);
-  background-size: 10px 16px;
-  position: relative;
-}
-
-.ss-go-top a:hover,
-.ss-go-top a:focus {
-  background-color: #cf1767;
-  color: #ffffff;
-}
-
-.ss-go-top::before {
-  content: "";
-  display: block;
-  width: 1px;
-  height: 100px;
-  background-color: rgba(255, 255, 255, 0.05);
-  position: absolute;
-  top: -115px;
-  left: 50%;
-}
-
-.ss-go-top::after {
-  content: "haut de page";
-  display: block;
-  float: left;
-  width: 120px;
-  font-size: 1.2rem;
-  line-height: 30px;
-  text-transform: uppercase;
-  letter-spacing: .2rem;
-  color: grey;
-  transition: all 0.5s;
-  -webkit-transform: rotate(-90deg);
-  transform: rotate(-90deg);
-  -webkit-transform-origin: left bottom;
-  -ms-transform-origin: left bottom;
-  transform-origin: left bottom;
-  position: absolute;
-  left: calc(30px + 15px);
-  top: -165px;
-}
 
 /* -------------------------------------------------------------------
  * responsive:
