@@ -2670,6 +2670,11 @@ input::-moz-focus-inner {
   padding: 30px;
   transition: all 0.3s ease-in-out;
 }
+.item-folio-full {
+  text-align: center;
+  padding: 65px;
+  transition: all 0.3s ease-in-out;
+}
 
 /* item-folio thumb
  * -------------------------------------- */
