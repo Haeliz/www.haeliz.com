@@ -737,7 +737,7 @@ input[type="button"] {
   font-weight: 700;
   font-size: 1.4rem;
   text-transform: uppercase;
-  letter-spacing: .5rem;
+  letter-spacing: .3rem;
   height: 6rem;
   line-height: 5.6rem;
   padding: 0 3.2rem;
@@ -1745,6 +1745,7 @@ input::-moz-focus-inner {
     background-color: #050505;
     position: fixed;
     top: 0;
+    max-width: 55%;
   }
 
   .header-nav-wrap {
@@ -1951,7 +1952,22 @@ input::-moz-focus-inner {
   .intro-text h1 {
     font-size: 7rem;
   }
+  .intro-pic {
+    top: 20%;
+    left: 40%;
+    opacity: .7;
+  }
 
+  .intro-pic::before {
+    opacity: .4;
+    height: 0%;
+  }
+
+  .intro-grid {
+    top: 20%;
+    opacity: .7;
+    max-height: 35%;
+  }
 }
 
 @media screen and (max-width:1024px) {
@@ -1983,17 +1999,20 @@ input::-moz-focus-inner {
   }
 
   .intro-pic {
-    top: 12%;
+    top: 25%;
     left: 40%;
+    opacity: .7;
   }
 
   .intro-pic::before {
     opacity: .4;
+    height: 0%;
   }
 
   .intro-grid {
     top: 20%;
-    opacity: .1;
+    opacity: .7;
+    max-height: 55%;
   }
 
   .intro-text h3 {
@@ -2031,7 +2050,9 @@ input::-moz-focus-inner {
   }
 
   .intro-pic {
-    left: 20%;
+    left: 10%;
+    background-size: 120%;
+    top: 30%;
   }
 
   .intro-grid {
