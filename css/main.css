@@ -1745,7 +1745,6 @@ input::-moz-focus-inner {
     background-color: #050505;
     position: fixed;
     top: 0;
-    max-width: 55%;
   }
 
   .header-nav-wrap {
